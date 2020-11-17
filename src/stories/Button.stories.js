@@ -17,6 +17,13 @@ Primary.args = {
   primary: true,
   label: 'Button',
 };
+Primary.parameters = {
+  docs: { 
+      source: { 
+          code: '<button>Test HTML snippet</button>'
+      }    
+  },
+};
 
 export const Secondary = Template.bind({});
 Secondary.args = {
