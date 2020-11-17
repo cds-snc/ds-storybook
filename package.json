@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "http-server": "^0.12.3",
     "@storybook/addon-a11y": "^6.0.28",
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
