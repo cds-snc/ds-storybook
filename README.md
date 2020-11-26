@@ -35,9 +35,8 @@ $ npm run storybook
 
 The deployment to Heroku is setup automatically via the git integration: https://platform-storybook.herokuapp.com/
 
-In order to publish your changes, please run the command `npm run build-storybook` and commit the generated changes in the folder `storybook-static`. More info on the [storybook publishing guide](https://storybook.js.org/docs/react/workflows/publish-storybook)
+In order to publish your changes, please run the command `npm run build:storybook` and commit the generated changes in the folder `storybook-static`. More info on the [storybook publishing guide](https://storybook.js.org/docs/react/workflows/publish-storybook)
 
-ß
 
 ### Contributing
 

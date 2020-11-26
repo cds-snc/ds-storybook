@@ -1,0 +1,6 @@
+.gc-checkbox {
+  @apply form-checkbox text-blue h-10 w-10 border-2 border-black;
+}
+.gc-checkbox-label {
+  @apply inline-flex items-center;
+}

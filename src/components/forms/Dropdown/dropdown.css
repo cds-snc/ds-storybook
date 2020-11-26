@@ -1,0 +1,3 @@
+.gc-dropdown {
+  @apply input focus:shadow-outline w-full lg:w-3/6;
+}

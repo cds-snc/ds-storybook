@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "../components/forms/Button/button.css";
+@import "../components/forms/Input/input.css";
+@import "../components/forms/Checkbox/checkbox.css";
+@import "../components/forms/Textbox/textbox.css";
+@import "../components/forms/Dropdown/dropdown.css";
+@import "../components/forms/Header/header.css";
+@import "../components/forms/Footer/footer.css";
+
 
 .input {
   border-color: #000;

@@ -1,3 +1,5 @@
+const { colors } = require('tailwindcss/defaultTheme')
+
 module.exports = {
   theme: {
     extend: {
@@ -28,13 +30,16 @@ module.exports = {
     },
     colors: {
       red: {
+        ...colors.red,
         100: "#f3e9e8",
         default: "#b10e1e",
       },
       white: {
+        ...colors.white,
         default: "#FFF",
       },
       blue: {
+        ...colors.blue,
         default: "#26374A",
         100: "#B2E3FF",
         200: "#DFF8FD",
@@ -43,6 +48,7 @@ module.exports = {
         500: "#75b9e0",
       },
       gray: {
+        ...colors.gray,
         default: "#EEE",
         selected: "#e1e4e7",
         500: "#a0aec0",
@@ -51,16 +57,21 @@ module.exports = {
         800: "#2d3748",
       },
       yellow: {
+        ...colors.yellow,
         default: "#ffbf47",
       },
       green: {
+        ...colors.green,
         default: "#00703C",
         darker: "#002D18",
       },
       black: {
+        ...colors.black,
         default: "#000",
       },
     },
   },
+  variants: {},
+  important: true,  
   plugins: [require("@tailwindcss/custom-forms")],
 };

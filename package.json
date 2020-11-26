@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public --no-dll",
-    "build-storybook": "build-storybook -s public --no-dll",
+    "build:storybook": "build-storybook -s public --no-dll",
     "build:tailwind": "postcss src/css/base.css -o src/css/tailwind.css"
   },
   "eslintConfig": {
