@@ -8,4 +8,16 @@ export default {
   component: Checkbox,
 };
 
-export const Default = () => <Checkbox label="Check this box"/>;
+export const Default = () => (
+  <React.Fragment>
+  <Checkbox label="Unchecked"/>
+  <Checkbox label="Checked" checked={true}/>
+  </React.Fragment>
+);
+Default.parameters = {
+  docs: { 
+      source: { 
+          code: '<label class="gc-checkbox-label"><input type="checkbox" class="gc-checkbox" checked=""><span class="ml-4">Check this box</span></label>'
+      }    
+  },
+};

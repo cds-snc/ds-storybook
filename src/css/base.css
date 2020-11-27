@@ -2,103 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "../components/forms/Button/button.css";
-@import "../components/forms/Input/input.css";
-@import "../components/forms/Checkbox/checkbox.css";
-@import "../components/forms/Textbox/textbox.css";
-@import "../components/forms/Dropdown/dropdown.css";
-@import "../components/forms/Header/header.css";
-@import "../components/forms/Footer/footer.css";
-
-
-.input {
-  border-color: #000;
-  @apply border-solid border-2 py-3 px-2;
+/**
+ * GC Button
+**/
+.gc-button {
+  @apply cursor-pointer border-b-4 border-gray-900 py-3 px-5 mr-2 font-bold text-lg no-underline text-gray-50 bg-blue-800 outline-none;
 }
 
-input[type="radio"] {
-  @apply form-radio text-blue-100 h-10 w-10 border-2; /*border-black*/
-}
-
-input[type="checkbox"] {
-  @apply form-checkbox text-blue-100 h-10 w-10 border-2; /*border-black*/
-}
-
-label {
-  @apply block pb-2;
-}
-
-@variants focus {
-  .input {
-    @apply outline-none;
-  }
-}
-
-/* form(s) */
-.form-group {
-  @apply mb-6;
-}
-
-.form-group label {
-  @apply text-xl font-bold mb-2;
-}
-
-.form-group label span {
-  @apply font-normal text-lg ml-3;
-}
-
-.form-gc-checkbox {
-  border-color: black;
-  @apply form-checkbox text-blue-100 h-10 w-10 border-2;
-}
-
-.form-gc-checkbox--label {
-  @apply inline-flex items-center;
-}
-
-.form-group-error {
-  @apply mr-4 pl-4 border-l-4; /*border-red*/
-}
-
-.form-control-error {
-  @apply border-4; /*border-red*/
+.gc-button:hover {
+  @apply bg-blue-700;
 }
 
 
-input[type="button"] {
-  color: white;
-  @apply cursor-pointer border-b-4 py-3 px-5 mr-2 font-bold text-lg no-underline bg-blue-400 outline-none; /*border-black*/
+/**
+ * GC Checkbox
+**/
+.gc-checkbox {
+  @apply text-gray-50 h-10 w-10 border-2 border-gray-900 rounded;
 }
 
-input[type="button"]:focus {
-  @apply shadow-outline;
+.gc-checkbox:checked {  
+  @apply text-gray-50 bg-blue-800;
 }
 
-input[type="button"]:hover {
-  @apply bg-blue-400;
+/**
+ * GC Dropdown
+**/
+.gc-dropdown {
+  @apply w-full lg:w-3/6 border-solid border-2 py-3 px-2 border-gray-900 mb-2;
 }
 
-input[type="text"] {
-  @apply mb-2;
+/**
+ * GC Input
+**/
+.gc-input-text {
+  @apply border-solid border-2 py-3 px-2 border-gray-900 mb-2;
+}
+/**
+ * GC Radio
+**/
+.gc-input-radio {
+  @apply border-solid border-2 py-3 px-2 border-gray-900;
 }
 
-/* purgecss start ignore */
-
-hr.wp-block-separator {
-  @apply mt-16 mb-8;
+label,
+.gc-label {
+  @apply block pb-2 mb-2 font-bold leading-5;
 }
 
-input[type="submit"].gform_button.button {
-  color: white;
-  @apply cursor-pointer border-b-4 py-3 px-5 mr-2 font-bold text-lg no-underline bg-blue-400 outline-none; /*border-black*/
+/**
+ * GC TextArea
+**/
+.gc-textarea {
+  @apply border-solid border-2 py-3 px-2 border-gray-900  w-full lg:w-3/6;  
 }
 
-input[type="submit"].gform_button.button:focus {
-  @apply shadow-outline;
-}
 
-input[type="submit"].gform_button.button:hover {
-  @apply bg-blue-400;
-}
-
-/* purgecss end ignore */

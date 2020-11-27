@@ -9,3 +9,10 @@ export default {
 };
 
 export const Default = () => <Button label="Next"/>;
+Default.parameters = {
+  docs: { 
+      source: { 
+          code: '<button type="button" class="gc-button button">Next</button>'
+      }    
+  },
+};

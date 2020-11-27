@@ -1,21 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Label from "../Label/Label";
 
 /**
  * Primary UI component for user interaction
  */
 export const Dropdown = ({ label, options, ...props }) => {
   const dropdownItems = options.map((option) => (
-    <option value={option.value}>option.text</option>
+    <option value={option.value}>{option.text}</option>
   ));
 
   return (
-    <select
-      class="gc-dropdown"
-      name="support_type" onChange={props.onChange}
-    >
-      {dropdownItems}
-    </select>
+    <React.Fragment>      
+      <Label for={props.name}>Select an option:</Label>
+      <select class="gc-dropdown" name={props.name} onChange={props.onChange}>
+        {dropdownItems}
+      </select>
+    </React.Fragment> 
   );
 };
 
@@ -28,10 +29,11 @@ Dropdown.propTypes = {
    * Button contents
    */
   label: PropTypes.string.isRequired,
+  name: PropTypes.string,
   /**
    * Optional click handler
    */
-  onClick: PropTypes.func,
+  onChange: PropTypes.func,
 };
 
 Dropdown.defaultProps = {

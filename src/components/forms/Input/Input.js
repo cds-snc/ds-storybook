@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Label from "../Label/Label";
 
 /**
  * Primary UI component for user interaction
  */
 export const Input = ({ label, name, ...props }) => {
   return (
-    <label class="gc-input-label" {...props}>
-      {label}
-      <input type="text" name={name} />
-    </label>
+    <React.Fragment>
+      <Label for={name}>{label}</Label>
+      <input type="text" name={name} className="gc-input-text" />
+    </React.Fragment>
   );
 };
 

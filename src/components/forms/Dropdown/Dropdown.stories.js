@@ -10,19 +10,24 @@ export default {
 
 const optionsArray = [
   {
-    key: "Matt",
-    text: "Matt",
-    value: "Matt",
-    image: { avatar: true, src: "/images/avatar/small/matt.jpg" },
+    key: "GC Form - First option",
+    text: "GC Form - First option",
+    value: "GC Form - First option"    
   },
   {
-    key: "Justen Kitsune",
-    text: "Justen Kitsune",
-    value: "Justen Kitsune",
-    image: { avatar: true, src: "/images/avatar/small/justen.jpg" },
-  },
+    key: "GC Form - Second option",
+    text: "GC Form - Second option",
+    value: "GC Form - Second option"    
+  }
 ];
 
 export const Default = () => (
   <Dropdown label="Options" options={optionsArray} />
 );
+Default.parameters = {
+  docs: { 
+      source: { 
+          code: '<select class="gc-dropdown" name="support_type"><option value="GC Form - First option">GC Form - First option</option><option value="GC Form - Second option">GC Form - Second option</option></select>'
+      }    
+  },
+};

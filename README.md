@@ -1,4 +1,4 @@
-# CDS Design System in Storybook
+# CDS Platform Design System in Storybook
 
 > \*Note: This repo is work-in-progress
 
