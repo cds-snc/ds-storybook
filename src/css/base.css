@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * GC Button
+**/
+.gc-button {
+  @apply cursor-pointer border-b-4 border-gray-900 py-3 px-5 mr-2 font-bold text-lg no-underline text-gray-50 bg-blue-800 outline-none;
+}
+
+.gc-button:hover {
+  @apply bg-blue-700;
+}
+
+
+/**
+ * GC Checkbox
+**/
+.gc-checkbox {
+  @apply text-gray-50 h-10 w-10 border-2 border-gray-900 rounded;
+}
+
+.gc-checkbox:checked {  
+  @apply text-gray-50 bg-blue-800;
+}
+
+/**
+ * GC Dropdown
+**/
+.gc-dropdown {
+  @apply w-full lg:w-3/6 border-solid border-2 py-3 px-2 border-gray-900 mb-2;
+}
+
+/**
+ * GC Input
+**/
+.gc-input-text {
+  @apply border-solid border-2 py-3 px-2 border-gray-900 mb-2;
+}
+/**
+ * GC Radio
+**/
+.gc-input-radio {
+  @apply border-solid border-2 py-3 px-2 border-gray-900;
+}
+
+label,
+.gc-label {
+  @apply block pb-2 mb-2 font-bold leading-5;
+}
+
+/**
+ * GC TextArea
+**/
+.gc-textarea {
+  @apply border-solid border-2 py-3 px-2 border-gray-900  w-full lg:w-3/6;  
+}
+
+
