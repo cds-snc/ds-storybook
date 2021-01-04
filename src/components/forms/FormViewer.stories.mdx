@@ -13,12 +13,8 @@ The form viewer expects a JSON with the following structure.
   "version": 1,
   "titleEn": "",
   "titleFr": "",
-  "submission": {
-    "templateID": "",
-    "email": ""
-  },
   "layout": [ ... ]
-  "questions":[ ... ]
+  "elements":[ ... ]
 }
 ```
 
@@ -30,15 +26,9 @@ There are 2 main parts to the structure:
 
    `titleEn/Fr`: The displayed title of the form to the user (`string`)
 
-   `submission`: An options object that defines how the form is submitted. (`object`)
-
-   ​ `templateID`: Defines which Notify template to use (`string`)
-
-   ​ `email`: Which email addess will the form be submitted to through Notify (`string`)
-
    `layout`: The order of the questions and/or page elements identified by id (`array`)
 
-   elements: An array of question and page display objects (`array`)
+   `elements`: An array of question and page display objects (`array`)
 
 2. Form questions and page elements to be rendered
 
@@ -47,6 +37,8 @@ There are 2 main parts to the structure:
    `type`: The object question or page element type (`enum`)
 
    `properties`: Object containing the question or page element properties (`object`)
+
+   ​ For example a question type could include the following properties:
 
    ​ `titleEn / titleFr`: Element title (`string`)
 
@@ -61,7 +53,6 @@ There are 2 main parts to the structure:
 Example:
 
 ```json
-
 {
   "version": 1,
   "titleEn": "CDS Intake Form",
