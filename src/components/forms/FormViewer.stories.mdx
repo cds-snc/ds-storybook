@@ -116,3 +116,171 @@ Example:
 
 
 ```
+
+## Question Types
+
+### Text Field
+
+A simple text input where the `title` property is used as the input's label.
+
+> Add rendered component here as an example
+
+```json
+{
+  "id": 123456789,
+  "type": "textField",
+  "properties": {
+    "titleEn": "string",
+    "titleFr": "string",
+    "placehoderEn": "string",
+    "placeholderFr": "string",
+    "description": "string",
+    "charLimit": 100,
+    "required": false
+  }
+}
+```
+
+`titleEn / titleFr`: Input label (`string`)
+
+`placeholderEn / placeholderFr`: Text that will appear in the text input field as a placeholder (`string`)
+
+`description`: Secondary paragraph/text of a question or element that provides additional context beyond the label `string`)
+
+`charLimit`: The maximum number of characters that can be submitted through the input
+
+`required`: A boolean flag identifying if the question element is a mandatory for submission (`bool`)
+
+### Text Area
+
+A simple muli-line text input where the `title` property is used as the input's label.
+
+> Add rendered component here as an example
+
+```json
+{
+  "id": 123456789,
+  "type": "textArea",
+  "properties": {
+    "titleEn": "string",
+    "titleFr": "string",
+    "placehoderEn": "string",
+    "placeholderFr": "string",
+    "description": "string",
+    "charLimit": 100,
+    "required": false
+  }
+}
+```
+
+`titleEn / titleFr`: Input label (`string`)
+
+`placeholderEn / placeholderFr`: Text that will appear in the text input field as a placeholder (`string`)
+
+`description`: Secondary paragraph/text of a question or element that provides additional context beyond the label `string`)
+
+`charLimit`: The maximum number of characters that can be submitted through the input
+
+`required`: A boolean flag identifying if the question element is a mandatory for submission (`bool`)
+
+### Dropdown / Select Menu
+
+A dropdown / select menu element that allows for a single selection.
+
+> Add rendered componenet here
+
+```json
+{
+  "id":12345678,
+  "type":"dropdown",
+  "properties":{
+    "titleEn":"string",
+    "titleFr":"string",
+    "descriptionEn":"string",
+    "descriptionFr":"string",
+    "required": false,
+    "choices":[
+      {
+        "en":"string",
+        "fr":"string"
+      }, ...
+    ]
+  }
+}
+```
+
+`titleEn / titleFr`: Input label (`string`)
+
+`description`: Secondary paragraph/text of a question or element that provides additional context beyond the label `string`)
+
+`required`: A boolean flag identifying if the question element is a mandatory for submission (`bool`)
+
+`choices`: An array of objects containing `en` and `fr` keys that represent the dropdown / select menu options to be displayed to users. (`array`)
+
+### Radio Buttons
+
+A radio button selection group that allows for a single selection
+
+> Add rendered component here
+
+```json
+{
+  "id":123456789,
+  "type":"radioButton",
+  "properties":{
+    "titleEn":"string",
+    "titleFr":"string",
+    "description":"string",
+    "description":"string",
+    "required":false,
+    "choices":[
+      {
+        "en":"string",
+        "fr":"string"
+      }, ...
+    ]
+  }
+}
+```
+
+`titleEn / titleFr`: Input label (`string`)
+
+`description`: Secondary paragraph/text of a question or element that provides additional context beyond the label `string`)
+
+`required`: A boolean flag identifying if the question element is a mandatory for submission (`bool`)
+
+`choices`: An array of objects containing `en` and `fr` keys that represent the dropdown / select menu options to be displayed to users. (`array`)
+
+### Checkboxes
+
+A checkbox selection group that allows for a single or multiple selection
+
+> Add rendered component here
+
+```json
+{
+  "id":123456789,
+  "type":"checkbox",
+  "properties":{
+    "titleEn":"string",
+    "titleFr":"string",
+    "description":"string",
+    "description":"string",
+    "required":false,
+    "choices":[
+      {
+        "en":"string",
+        "fr":"string"
+      }, ...
+    ]
+  }
+}
+```
+
+`titleEn / titleFr`: Input label (`string`)
+
+`description`: Secondary paragraph/text of a question or element that provides additional context beyond the label `string`)
+
+`required`: A boolean flag identifying if the question element is a mandatory for submission (`bool`)
+
+`choices`: An array of objects containing `en` and `fr` keys that represent the dropdown / select menu options to be displayed to users. (`array`)
