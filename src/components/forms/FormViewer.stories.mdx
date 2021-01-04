@@ -10,38 +10,21 @@ The form viewer expects a JSON with the following structure.
 
 ```json
 {
-  "id": 1234567890
-  "internalTitleEn": "",
-  "internalTitleFr": "",
-  "publishingStatus": true,
-
-  "form":
-    {
-      "version": 1,
-      "titleEn": "",
-      "titleFr": "",
-      "submission": {
-        "templateID": "",
-        "email": ""
-      },
-      "questions":[ ... ]
-    }
-  }
-
-
+  "version": 1,
+  "titleEn": "",
+  "titleFr": "",
+  "submission": {
+    "templateID": "",
+    "email": ""
+  },
+  "layout": [ ... ]
+  "questions":[ ... ]
+}
 ```
 
-There are 3 main parts to the structure:
+There are 2 main parts to the structure:
 
-1. Form object in the context of Form Builder
-
-   `id`: The unique id (UUID) for the form (`int`)
-
-   `internalTitleEn/Fr`: Sets the title as seen from the Form Builder application (`string`)
-
-   `publishingStatus`: Set from the Form Builder as to whether this form can be rendered (`bool`)
-
-2. Form object in the context of Form Viewer
+1. Form object in the context of Form Viewer
 
    `version`: Defines the static version of the form (`int`)
 
@@ -49,122 +32,96 @@ There are 3 main parts to the structure:
 
    `submission`: An options object that defines how the form is submitted. (`object`)
 
-   ​ -> `templateID`: Defines which Notify template to use (`string`)
+   ​ `templateID`: Defines which Notify template to use (`string`)
 
-   ​ -> `email`: Which email addess will the form be submitted to through Notify (`string`)
+   ​ `email`: Which email addess will the form be submitted to through Notify (`string`)
 
-   `questions`: An array of question objects (`array`)
+   `layout`: The order of the questions and/or page elements identified by id (`array`)
 
-3. Form questions to be rendered
+   elements: An array of question and page display objects (`array`)
+
+2. Form questions and page elements to be rendered
+
+   `id`: The unique id for the object (`int`)
+
+   `type`: The object question or page element type (`enum`)
+
+   `properties`: Object containing the question or page element properties (`object`)
+
+   ​ `titleEn / titleFr`: Element title (`string`)
+
+   ​ `placeholderEn / placeholderFr`: Text that will appear in the text input field as a placeholder (`string`)
+
+   ​ `description`: Secondary paragraph of question or element that provides additional context beyond the title (`string`)
+
+   ​ `charLimit`: The maximum number of characters that can be submitted through the input
+
+   ​ `required`: A boolean flag identifying if the question element is a mandatory for submission (`bool`)
+
+Example:
 
 ```json
+
 {
-  "internalTitleEn": "CDS Intake Form",
-  "internalTitleFr": "SNC Formulaire d'admission",
-  "publishingStatus": true,
-  "submission": {
-    "templateID": "",
-    "email": ""
-  },
-  "formVersion": [
+  "version": 1,
+  "titleEn": "CDS Intake Form",
+  "titleFr": "SNC Formulaire d'admission",
+  "layout":[1,5,6,7]
+  "elements": [
     {
-      "version": 1,
-      "titleEn": "CDS Intake Form",
-      "titleFr": "SNC Formulaire d'admission",
-      "questions": [
-        {
-          "sequence": 1,
-          "type": "textField",
-          "object": {
-            "titleEn": "What is your full name?",
-            "titleFr": "Quel est votre nom complet?",
-            "placeholderEn": "",
-            "placeholderFr": "",
-            "description": "",
-            "charLimit": 100,
-            "required": true
-          }
-        },
-        {
-          "sequence": 2,
-          "type": "textField",
-          "object": {
-            "titleEn": "What is your email address?",
-            "titleFr": "Quelle est votre adresse électronique?",
-            "placeholderEn": "",
-            "placeholderFr": "",
-            "description": "",
-            "charLimit": 100,
-            "required": true
-          }
-        },
-        {
-          "sequence": 3,
-          "type": "textField",
-          "object": {
-            "titleEn": "What department do you work for?",
-            "titleFr": "Pour quel service travaillez-vous?",
-            "placeholderEn": "",
-            "placeholderFr": "",
-            "description": "",
-            "charLimit": 100,
-            "required": false
-          }
-        },
-        {
-          "sequence": 4,
-          "type": "textField",
-          "object": {
-            "titleEn": "What is the name of your service?",
-            "titleFr": "Quel est le nom de votre service?",
-            "placeholderEn": "",
-            "placeholderFr": "",
-            "description": "",
-            "charLimit": 100,
-            "required": false
-          }
-        },
-        {
-          "sequence": 5,
-          "type": "textArea",
-          "object": {
-            "titleEn": "What is the problem you are facing",
-            "titleFr": "Quel est le problème auquel vous êtes confronté?",
-            "placeholderEn": "",
-            "placeholderFr": "",
-            "description": "",
-            "charLimit": 100,
-            "required": false
-          }
-        },
-        {
-          "sequence": 6,
-          "type": "textField",
-          "object": {
-            "titleEn": "What is your timeline?",
-            "titleFr": "Quel est votre calendrier?",
-            "placeholderEn": "",
-            "placeholderFr": "",
-            "description": "",
-            "charLimit": 100,
-            "required": false
-          }
-        },
-        {
-          "sequence": 7,
-          "type": "textArea",
-          "object": {
-            "titleEn": "How did you hear about us?",
-            "titleFr": "Comment avez-vous entendu parler de nous?",
-            "placeholderEn": "",
-            "placeholderFr": "",
-            "description": "",
-            "charLimit": 100,
-            "required": false
-          }
-        }
-      ]
-    }
-  ]
+      "id": 1,
+      "type": "textField",
+      "properties": {
+        "titleEn": "What is your full name?",
+        "titleFr": "Quel est votre nom complet?",
+        "placeholderEn": "",
+        "placeholderFr": "",
+        "description": "",
+        "charLimit": 100,
+        "required": true
+  		}
+		},
+    {
+      "id": 5,
+      "type": "textArea",
+      "properties": {
+        "titleEn": "What is the problem you are facing",
+        "titleFr": "Quel est le problème auquel vous êtes confronté?",
+        "placeholderEn": "",
+        "placeholderFr": "",
+        "description": "",
+        "charLimit": 100,
+        "required": false
+      }
+    },
+    {
+      "id": 6,
+      "type": "textField",
+      "properties": {
+        "titleEn": "What is your timeline?",
+        "titleFr": "Quel est votre calendrier?",
+        "placeholderEn": "",
+        "placeholderFr": "",
+        "description": "",
+        "charLimit": 100,
+        "required": false
+      }
+    },
+    {
+      "id": 7,
+      "type": "textArea",
+      "properties": {
+        "titleEn": "How did you hear about us?",
+        "titleFr": "Comment avez-vous entendu parler de nous?",
+        "placeholderEn": "",
+        "placeholderFr": "",
+        "description": "",
+        "charLimit": 100,
+        "required": false
+      }
+		}
+	]
 }
+
+
 ```
