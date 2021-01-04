@@ -10,6 +10,7 @@ The form viewer expects a JSON with the following structure.
 
 ```json
 {
+  "id":1234,
   "version": 1,
   "titleEn": "",
   "titleFr": "",
@@ -21,6 +22,7 @@ The form viewer expects a JSON with the following structure.
 There are 2 main parts to the structure:
 
 1. Form object in the context of Form Viewer
+   `id`: Unique identifier for the form (`int`)
 
    `version`: Defines the static version of the form (`int`)
 
@@ -54,6 +56,7 @@ Example:
 
 ```json
 {
+  "id": 1234,
   "version": 1,
   "titleEn": "CDS Intake Form",
   "titleFr": "SNC Formulaire d'admission",
