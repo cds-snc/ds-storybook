@@ -1,0 +1,25 @@
+import React from 'react';
+
+import classes from './{{name}}.module.css';
+
+
+export const {{name}} = (props) => {
+  return (
+    <{{tag}} className={classes.Root} {...props}></{{tag}}>
+  );
+}
+
+{{name}}.propTypes = {
+  /**
+   * Define component property types
+   */
+};
+
+{{name}}.defaultProps = {
+  /**
+   * Define defaults for properties
+   */
+};
+
+export default {{name}};
+
