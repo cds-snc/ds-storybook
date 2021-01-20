@@ -14,7 +14,9 @@ The form viewer expects a JSON with the following structure.
   "version": 1,
   "titleEn": "",
   "titleFr": "",
-  "layout": [ ... ]
+  "layout": [ ... ],
+  "startPage": {},
+  "endPage": {},
   "elements":[ ... ]
 }
 ```
@@ -32,6 +34,11 @@ There are 2 main parts to the structure:
    `layout`: The order of the questions and/or page elements identified by id (`array`)
 
    `elements`: An array of question and page display objects (`array`)
+
+   `startPage`: Defines what appears on the first, intro page
+
+   `endPage`: Defines what appears on the confirmation page, after the form was submitted
+
 
 2. Form questions and page elements to be rendered
 
@@ -61,7 +68,10 @@ Example:
   "version": 1,
   "titleEn": "CDS Intake Form",
   "titleFr": "SNC Formulaire d'admission",
-  "layout":["1","5","6","7"]
+  "layout":["1","5","6","7"],
+  "endPage": {
+    "referrerUrl": "https://digital.canada.ca/"
+  },
   "elements": [
     {
       "id": "1",
@@ -301,7 +311,6 @@ A checkbox selection group that allows for a single or multiple selection
 
 `choices`: An array of objects containing `en` and `fr` keys that represent the dropdown / select menu options to be displayed to users. (`array`)
 
-
 ### File upload
 
 A browser-native file upload field
@@ -332,9 +341,6 @@ A browser-native file upload field
 `fileType`: The type of file, e.g. `.pdf`. More info about this [browser-native HTML type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file)
 
 `required`: A boolean flag identifying if the question element is a mandatory for submission (`bool`)
-
-
-
 
 ### Plain text
 
