@@ -19,7 +19,7 @@ Source: https://designsystem.digital.gov/components/form-templates/
 }
 
 export const textInputFormGroup = (): React.ReactElement => (
-  <FormGroup>
+  <FormGroup name="1">
     <Label htmlFor="input-type-text">Please enter your email address</Label>
     <Description>Example: jonbovi@gmail.com</Description>
     <TextInput id="input-type-text" name="input-type-text" type="text" />
@@ -27,7 +27,7 @@ export const textInputFormGroup = (): React.ReactElement => (
 )
 
 export const textInputErrorFormGroup = (): React.ReactElement => (
-  <FormGroup error>
+  <FormGroup name="1" error>
     <Label htmlFor="input-type-text" error>
     Please enter your email address
     </Label>

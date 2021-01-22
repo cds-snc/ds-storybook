@@ -31,12 +31,16 @@
   @apply font-bold text-h2 pb-6;
 }
 
+.gc-form-group {
+  @apply mb-10;
+}
+
 .gc-h3 {
   @apply font-bold text-h3 pb-6;
 }
 
 .gc-section-header {
-  @apply font-bold text-h2 my-0 p-6 bg-gray-background;
+  @apply font-bold text-h2 mb-0 mt-20 p-6 bg-gray-background;
 }
 
 .gc-legend {
@@ -75,14 +79,9 @@
   @apply text-gray-50 bg-blue-800;
 }
 
-/* .gc-checkbox .gc-label,
-.gc-input-radio .gc-label {
-  @apply inline font-normal text-base;
-} */
-
 .gc-input-radio,
 .gc-input-checkbox {
-  @apply flex py-3 px-2 items-center;
+  @apply flex pt-4 pb-2 px-0 items-center;
 }
 
 .gc-radio-label,
@@ -91,7 +90,7 @@
 }
 
 .gc-radio__input {
-  @apply h-10 w-10 border-2 border-gray-900 mr-2 align-middle;
+  @apply h-10 w-10 border-2 border-gray-900 mr-4;
 }
 
 .gc-phase-banner {

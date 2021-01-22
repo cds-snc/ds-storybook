@@ -26847,6 +26847,10 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.gc-form-group {
+  margin-bottom: 2.5rem;
+}
+
 .gc-h3 {
   font-weight: 700;
   font-size: 24px;
@@ -26860,8 +26864,8 @@ video {
   font-weight: 700;
   font-size: 30px;
   line-height: 33.5px;
-  margin-top: 0px;
   margin-bottom: 0px;
+  margin-top: 5rem;
   padding: 1.5rem;
 }
 
@@ -26984,18 +26988,13 @@ video {
   color: rgba(249, 250, 251, var(--tw-text-opacity));
 }
 
-/* .gc-checkbox .gc-label,
-.gc-input-radio .gc-label {
-  @apply inline font-normal text-base;
-} */
-
 .gc-input-radio, .gc-input-checkbox {
   display: flex;
   align-items: center;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
 }
 
 .gc-radio-label, .gc-checkbox-label {
@@ -27010,8 +27009,7 @@ video {
   border-color: rgba(17, 24, 39, var(--tw-border-opacity));
   border-width: 2px;
   height: 2.5rem;
-  margin-right: 0.5rem;
-  vertical-align: middle;
+  margin-right: 1rem;
   width: 2.5rem;
 }
 
