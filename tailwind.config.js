@@ -44,6 +44,8 @@ module.exports = {
       },
       blue: {
         ...colors.blue,
+        dark: "#284162",
+        light: "#335075",
         default: "#26374A",
         100: "#B2E3FF",
         200: "#DFF8FD",
@@ -81,6 +83,7 @@ module.exports = {
     },
     boxShadow: {
       result: "0px 0px 12px -2px rgba(0,0,0,0.4)",
+      none: "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
     },
     borderWidth: {
       default: "1px",

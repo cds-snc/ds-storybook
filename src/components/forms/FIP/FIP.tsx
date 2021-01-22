@@ -1,5 +1,6 @@
 import React from "react";
 import classnames from "classnames";
+import LanguageToggle from "../LanguageToggle/LanguageToggle";
 
 interface FIPProps {
   href: string,
@@ -25,7 +26,7 @@ export const FIP = (props: FIPProps): React.ReactElement => {
           />
         </a>
       </div>
-      Language Toggle
+      <LanguageToggle />
     </div>
   );
 };

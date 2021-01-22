@@ -2,13 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.gc-layout {
+  @apply mx-40;
+}
+
+.gc-fieldset ul {
+  @apply mb-10;
+}
+
 .gc-alert,
 .gc-error-message {
   @apply text-base;
 }
 
 .gc-p {
-  @apply text-p;
+  @apply text-p mb-10;
 }
 
 .gc-description {
@@ -16,7 +24,7 @@
 }
 
 .gc-h1 {
-  @apply border-b-2 border-red-default text-h1 font-bold pb-1 mb-10;
+  @apply border-b-2 border-red-default text-h1 font-bold pb-1 mb-20;
 }
 
 .gc-h2 {
@@ -32,7 +40,7 @@
 }
 
 .gc-legend {
-  @apply text-h3 font-bold mb-10;
+  @apply text-h2 mb-10 font-bold;
 }
 
 .gc-button {
@@ -87,7 +95,7 @@
 }
 
 .gc-phase-banner {
-  @apply bg-gray-background flex items-center py-6 px-40 mb-4;
+  @apply bg-gray-background flex items-center py-6 px-40;
 }
 
 .gc-phase-banner span {
@@ -104,6 +112,50 @@
 
 .gc-phase-banner span span {
   @apply border-0 py-0 px-0 mr-0;
+}
+
+.gc-fip {
+  @apply flex flex-row justify-between items-center mx-40 my-20;
+}
+
+.gc-fip div {
+  @apply h-auto max-h-10 w-72;
+}
+
+.gc-language-toggle {
+  @apply text-right text-sm;
+}
+
+.gc-language-toggle button {
+  @apply shadow-none bg-none text-blue-900 underline border-0 text-base;
+}
+
+.gc-footer {
+  @apply border-0 bg-gray-100 mt-20;
+}
+
+.gc-footer .gc-footer-container {
+  @apply flex py-10 px-40 mt-20 flex-row items-center justify-between;
+}
+
+.gc-footer .gc-footer-container ul {
+  @apply p-0 flex text-base list-inside;
+}
+
+.gc-footer .gc-footer-container ul li {
+  @apply pr-4;
+}
+
+.gc-footer .gc-footer-container ul li:last-of-type {
+  @apply pr-0;
+}
+
+.gc-footer .gc-footer-container ul li a {
+  @apply no-underline hover:underline text-blue-dark;
+}
+
+.gc-footer div img {
+  @apply h-10;
 }
 
 .validation-message {
