@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Dropdown } from "./Dropdown";
-import { Label } from "../Label/Label";
 
 export default {
   title: "Forms/Dropdown",
@@ -11,35 +9,59 @@ export default {
   },
 };
 
-const inputProps = {
-  key: "id",
-  id: "id",
-  name: "province",
-  label: "Select a province",
-  value: "",
-  choices: [
-    "",
-    "Alberta",
-    "British Columbia",
-    "Manitoba",
-    "New Brunswick",
-    "Newfoundland",
-    "Northwest Territories",
-    "Nova Scotia",
-    "Nunavut",
-    "Ontario",
-    "Prince Edward Island",
-    "Quebec",
-    "Saskatchewan",
-    "Yukon",
-  ],
-};
-
 export const defaultDropdown = (): React.ReactElement => (
-  <React.Fragment>
-    <Label htmlFor="options">{inputProps.label}</Label>
-    <Dropdown {...inputProps} />
-  </React.Fragment>
+  <Dropdown
+    key="id"
+    id="id"
+    name="province"
+    validationStatus="success"
+    label="Select a province"
+    description="We are looking for the province you currently live in"
+    choices={[
+      "",
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland",
+      "Northwest Territories",
+      "Nova Scotia",
+      "Nunavut",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan",
+      "Yukon",
+    ]}
+  />
+);
+
+export const DropdownWithErrorMessage = (): React.ReactElement => (
+  <Dropdown
+    key="id"
+    id="id"
+    name="province"
+    validationStatus="error"
+    label="Select a province"
+    hint="(optional)"
+    description="We are looking for the province you currently live in"
+    choices={[
+      "",
+      "Alberta",
+      "British Columbia",
+      "Manitoba",
+      "New Brunswick",
+      "Newfoundland",
+      "Northwest Territories",
+      "Nova Scotia",
+      "Nunavut",
+      "Ontario",
+      "Prince Edward Island",
+      "Quebec",
+      "Saskatchewan",
+      "Yukon",
+    ]}
+  />
 );
 
 defaultDropdown.parameters = {

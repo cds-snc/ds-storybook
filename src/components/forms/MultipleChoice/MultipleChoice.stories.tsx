@@ -10,9 +10,22 @@ export default {
 };
 
 export const defaultMultipleChoice = (): React.ReactElement => (
-  <MultipleChoice
-    id="1"
-    label="Funding Requested"
-    options={["Community accessibility", "Workplace accessibility"]}
-  />
+  <React.Fragment>
+    <MultipleChoice
+      id="1"
+      label="Funding Requested"
+      options={["Community accessibility", "Workplace accessibility"]}
+      description="Select the option that best applies to you"
+      hint="(optional)"
+      validationStatus="error"
+    />
+
+    <MultipleChoice
+      id="1"
+      label="Funding Requested"
+      options={["Community accessibility", "Workplace accessibility"]}
+      validationStatus="success"
+      hint="(No Errors)"
+    />
+  </React.Fragment>
 );

@@ -1,18 +1,18 @@
-import React from "react"
-import { render } from "@testing-library/react"
+import React from "react";
+import { render } from "@testing-library/react";
 
-import { Dropdown } from "./Dropdown"
+import { Dropdown } from "./Dropdown";
 
 describe("Dropdown component", () => {
   it("renders without errors", () => {
     const { queryByTestId } = render(
-      <Dropdown id="input-type-text" name="input-type-text">
-        <option>- Select - </option>
-        <option value="value1">Option A</option>
-        <option value="value2">Option B</option>
-        <option value="value3">Option C</option>
-      </Dropdown>
-    )
-    expect(queryByTestId("dropdown")).toBeInTheDocument()
-  })
-})
+      <Dropdown
+        label="Dropdown label"
+        choices={["- Select -", "Option A", "Option B", "Option C"]}
+        id="input-type-text"
+        name="input-type-text"
+      />
+    );
+    expect(queryByTestId("dropdown")).toBeInTheDocument();
+  });
+});

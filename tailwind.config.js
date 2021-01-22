@@ -17,12 +17,12 @@ module.exports = {
     */
 
     fontSize: {
-      sm: ["16px", "20px"],
+      sm: ["16px", "22px"],
       base: ["20px", "30px"],
       p: ["20px", "30px"],
       h3: ["24px", "24.3px"],
       h2: ["30px", "33.5px"],
-      h1: ["34px", "37.4px"],
+      h1: ["34px", "42px"],
     },
     screens: {
       xxs: "280px",

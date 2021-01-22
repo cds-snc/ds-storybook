@@ -7,15 +7,13 @@ interface FormGroupProps {
   legend?: React.ReactNode;
   legendSrOnly?: boolean;
   className?: string;
-  error?: boolean;
 }
 
 export const FormGroup = (props: FormGroupProps): React.ReactElement => {
-  const { name, children, className, error, legendSrOnly, legend } = props;
+  const { name, children, className, legendSrOnly, legend } = props;
 
   const classes = classnames(
     "gc-form-group",
-    { "gc-form-group--error": error },
     className
   );
 

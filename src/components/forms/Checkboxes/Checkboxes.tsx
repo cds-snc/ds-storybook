@@ -1,23 +1,21 @@
 import React from "react";
 import FormGroup from "../FormGroup/FormGroup";
-import Radio from "../Radio/Radio";
+import Checkbox from "../Checkbox/Checkbox";
 import Label from "../Label/Label";
 import Description from "../Description/Description";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
-interface MultipleChoiceProps {
+interface CheckboxesProps {
   options: string[];
   description?: string;
-  hint?: string;
   validationStatus?: "error" | "success";
+  hint?: string;
   label: string;
   id?: string;
   className?: string;
 }
 
-export const MultipleChoice = (
-  props: MultipleChoiceProps
-): React.ReactElement => {
+export const Checkboxes = (props: CheckboxesProps): React.ReactElement => {
   const {
     options = [],
     id,
@@ -37,16 +35,15 @@ export const MultipleChoice = (
         <ErrorMessage>Helpful error message</ErrorMessage>
       ) : null}
       {options.map((listItem, index) => (
-        <Radio
+        <Checkbox
           name={`${id}`}
           key={`key-${id}-${index}`}
           id={`id-${id}-${index}`}
           label={listItem}
-          value={listItem}
         />
       ))}
     </FormGroup>
   );
 };
 
-export default MultipleChoice;
+export default Checkboxes;

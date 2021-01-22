@@ -1,5 +1,8 @@
 import React from "react";
 import classnames from "classnames";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import Label from "../Label/Label";
+import Description from "../Description/Description";
 
 type TextAreaRef =
   | string
@@ -12,9 +15,11 @@ type TextAreaRef =
 export interface TextAreaProps {
   id: string;
   name: string;
+  label: string;
+  description?: string;
   className?: string;
-  error?: boolean;
-  success?: boolean;
+  hint?: string;
+  validationStatus?: "error" | "success";
   children?: React.ReactNode;
   inputRef?: TextAreaRef;
 }
@@ -26,33 +31,37 @@ export const TextArea = (
     id,
     name,
     className,
-    error,
-    success,
+    label,
+    description,
     children,
+    hint,
     inputRef,
+    validationStatus,
     ...inputProps
   } = props;
 
-  const classes = classnames(
-    "gc-textarea",
-    {
-      "gc-input--error": error,
-      "gc-input--success": success,
-    },
-    className
-  );
+  const classes = classnames("gc-textarea", className);
 
   return (
-    <textarea
-      data-testid="textarea"
-      className={classes}
-      id={id}
-      name={name}
-      ref={inputRef}
-      {...inputProps}
-    >
-      {children}
-    </textarea>
+    <React.Fragment>
+      <Label hint={hint} htmlFor="input-type-text">
+        {label}
+      </Label>
+      {description ? <Description>{description}</Description> : null}
+      {validationStatus === "error" ? (
+        <ErrorMessage>Helpful error message</ErrorMessage>
+      ) : null}
+      <textarea
+        data-testid="textarea"
+        className={classes}
+        id={id}
+        name={name}
+        ref={inputRef}
+        {...inputProps}
+      >
+        {children}
+      </textarea>
+    </React.Fragment>
   );
 };
 
