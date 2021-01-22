@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.gc-layout {
+.gc-layout-container {
   @apply mx-40;
 }
 
@@ -134,7 +134,7 @@
 }
 
 .gc-footer .gc-footer-container {
-  @apply flex py-10 px-40 mt-20 flex-row items-center justify-between;
+  @apply flex py-10 px-40 mt-10 flex-row items-center justify-between;
 }
 
 .gc-footer .gc-footer-container ul {

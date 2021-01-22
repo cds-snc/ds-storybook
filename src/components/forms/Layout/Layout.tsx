@@ -25,9 +25,8 @@ export const EsdcMockup = (props: LayoutProps): React.ReactElement => {
         src="./sig-blk-en.svg"
         alt="this is alt-text"
       />
-      <div data-testid="footer" className={classes} id={id}>
-        {children}
-      </div>
+      <div className="gc-layout-container">{children}</div>
+      <div data-testid="footer" className={classes} id={id}></div>
       <Footer />
     </React.Fragment>
   );
