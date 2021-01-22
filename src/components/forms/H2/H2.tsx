@@ -13,13 +13,10 @@ export const H2 = (props: H2Props): React.ReactElement => {
   const classes = classnames("gc-h2", className);
 
   return (
-    <React.Fragment>
-      <h2 data-testid="h2" className={classes} id={id}>
-        {heading}
-      </h2>
-    </React.Fragment>
+    <h2 data-testid="h2" className={classes} id={id}>
+      {heading}
+    </h2>
   );
 };
 
 export default H2;
-

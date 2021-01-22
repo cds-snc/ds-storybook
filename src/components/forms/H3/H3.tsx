@@ -13,13 +13,10 @@ export const H3 = (props: H3Props): React.ReactElement => {
   const classes = classnames("gc-h3", className);
 
   return (
-    <React.Fragment>
-      <h3 data-testid="h3" className={classes} id={id}>
-        {heading}
-      </h3>
-    </React.Fragment>
+    <h3 data-testid="h3" className={classes} id={id}>
+      {heading}
+    </h3>
   );
 };
 
 export default H3;
-

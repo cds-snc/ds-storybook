@@ -2,14 +2,6 @@ const { colors } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   theme: {
-    extend: {
-      spacing: {
-        "56": "14rem",
-        "72": "18rem",
-        "84": "21rem",
-        "96": "24rem",
-      },
-    },
     container: {
       center: true,
     },
@@ -25,11 +17,11 @@ module.exports = {
     */
 
     fontSize: {
-      sm: ["14px", "20px"],
+      sm: ["16px", "20px"],
       base: ["20px", "30px"],
       p: ["20px", "30px"],
       h3: ["24px", "24.3px"],
-      h2: ["32px", "35.5px"],
+      h2: ["30px", "33.5px"],
       h1: ["34px", "37.4px"],
     },
     screens: {
@@ -66,6 +58,8 @@ module.exports = {
         ...colors.gray,
         default: "#EEE",
         selected: "#e1e4e7",
+        text: "#585858",
+        background: "#f4f4f4",
         500: "#a0aec0",
         600: "#718096",
         700: "#4a5568",

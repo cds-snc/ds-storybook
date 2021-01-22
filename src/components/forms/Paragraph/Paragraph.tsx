@@ -13,13 +13,10 @@ export const Paragraph = (props: ParagraphProps): React.ReactElement => {
   const classes = classnames("gc-p", className);
 
   return (
-    <React.Fragment>
-      <p data-testid="p" className={classes} id={id}>
-        {text}
-      </p>
-    </React.Fragment>
+    <p data-testid="p" className={classes} id={id}>
+      {text}
+    </p>
   );
 };
 
 export default Paragraph;
-

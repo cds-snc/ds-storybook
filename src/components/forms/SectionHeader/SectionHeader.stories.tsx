@@ -10,5 +10,5 @@ export default {
 };
 
 export const defaultSectionHeader = (): React.ReactElement => (
-  <SectionHeader> This is a section Header </SectionHeader>
+  <SectionHeader> This is a section header </SectionHeader>
 );
