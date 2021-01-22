@@ -2,8 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.gc-p {
+  @apply text-p;
+}
+
+.gc-h1 {
+  @apply border-b-2 border-red-default text-h1 font-bold pb-1 mb-10;
+}
+
+.gc-h2 {
+  @apply font-bold text-h2 pb-6;
+}
+
+.gc-h3 {
+  @apply font-bold text-h3 pb-6;
+}
+
 .gc-button {
-  @apply cursor-pointer border-b-4 border-gray-900 py-3 px-5 mr-2 my-5 font-bold text-lg no-underline text-gray-50 bg-blue-800 outline-none w-60;
+  @apply cursor-pointer border-b-4 border-gray-900 py-3 px-5 mr-2 my-5 font-bold text-p no-underline text-gray-50 bg-blue-800 outline-none w-60;
 }
 
 .gc-button:hover {
@@ -11,36 +27,40 @@
 }
 
 .gc-label {
-  @apply block py-2 my-2 font-bold leading-5;
+  @apply block mb-2 text-base font-bold leading-5;
 }
 
 .gc-textarea {
-  @apply border-solid border-2 py-3 px-2 border-gray-900  w-full lg:w-3/6;
+  @apply border-solid border-2 py-3 px-2 border-gray-900 my-0 w-full lg:w-3/6;
 }
 
 .gc-input-text {
-  @apply border-solid border-2 py-3 px-2 my-2 border-gray-900 mb-2;
+  @apply border-solid border-2 py-3 px-2 my-0 border-gray-900 mb-2;
 }
 
 .gc-dropdown {
   @apply w-full lg:w-3/6 border-solid border-2 py-3 px-2 border-gray-900 mb-2;
 }
 
-.gc-checkbox .gc-checkbox__input {
-  @apply text-gray-50 h-10 w-10 border-2 border-gray-900 rounded mr-2 align-middle my-2;
+.gc-input-checkbox .gc-input-checkbox__input {
+  @apply text-gray-50 h-10 w-10 border-2 border-gray-900 rounded mr-2 align-middle;
 }
 
-.gc-checkbox:checked {
+.gc-input-checkbox:checked {
   @apply text-gray-50 bg-blue-800;
 }
 
-.gc-checkbox .gc-label,
+/* .gc-checkbox .gc-label,
 .gc-input-radio .gc-label {
-  @apply inline font-normal;
+  @apply inline font-normal text-base;
+} */
+
+.gc-input-radio, .gc-input-checkbox {
+  @apply flex py-3 px-2 items-center;
 }
 
-.gc-input-radio {
-  @apply py-3 px-2;
+.gc-radio-label, .gc-checkbox-label {
+  @apply block font-normal text-base;
 }
 
 .gc-radio__input {

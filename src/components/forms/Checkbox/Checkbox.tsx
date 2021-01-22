@@ -19,19 +19,19 @@ export const Checkbox = (
 ): React.ReactElement => {
   const { id, name, className, label, inputRef, ...inputProps } = props;
 
-  const classes = classnames("gc-checkbox", className);
+  const classes = classnames("gc-input-checkbox", className);
 
   return (
     <div data-testid="checkbox" className={classes}>
       <input
-        className="gc-checkbox__input"
+        className="gc-input-checkbox__input"
         id={id}
         type="checkbox"
         name={name}
         ref={inputRef}
         {...inputProps}
       />
-      <label className="gc-label" htmlFor={id}>
+      <label className="gc-checkbox-label" htmlFor={id}>
         {label}
       </label>
     </div>

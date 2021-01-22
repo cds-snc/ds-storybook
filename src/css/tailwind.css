@@ -9887,69 +9887,34 @@ video {
   height: 100vh;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 20px;
+  line-height: 30px;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-p {
+  font-size: 20px;
+  line-height: 30px;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.text-h3 {
+  font-size: 24px;
+  line-height: 24.3px;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-h2 {
+  font-size: 32px;
+  line-height: 35.5px;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-8xl {
-  font-size: 6rem;
-  line-height: 1;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
+.text-h1 {
+  font-size: 34px;
+  line-height: 37.4px;
 }
 
 .leading-3 {
@@ -26439,6 +26404,36 @@ video {
   animation: bounce 1s infinite;
 }
 
+.gc-p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.gc-h1 {
+  --tw-border-opacity: 1;
+  border-color: rgba(177, 14, 30, var(--tw-border-opacity));
+  border-bottom-width: 2px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 37.4px;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0.25rem;
+}
+
+.gc-h2 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 35.5px;
+  padding-bottom: 1.5rem;
+}
+
+.gc-h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24.3px;
+  padding-bottom: 1.5rem;
+}
+
 .gc-button {
   --tw-bg-opacity: 1;
   background-color: rgba(38, 55, 74, var(--tw-bg-opacity));
@@ -26447,8 +26442,8 @@ video {
   border-bottom-width: 4px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 20px;
+  line-height: 30px;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   margin-right: 0.5rem;
@@ -26472,11 +26467,10 @@ video {
 .gc-label {
   display: block;
   font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
   line-height: 1.25rem;
-  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .gc-textarea {
@@ -26484,6 +26478,8 @@ video {
   border-color: rgba(17, 24, 39, var(--tw-border-opacity));
   border-style: solid;
   border-width: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.75rem;
@@ -26502,8 +26498,8 @@ video {
   border-color: rgba(17, 24, 39, var(--tw-border-opacity));
   border-style: solid;
   border-width: 2px;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-bottom: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -26530,14 +26526,12 @@ video {
   }
 }
 
-.gc-checkbox .gc-checkbox__input {
+.gc-input-checkbox .gc-input-checkbox__input {
   --tw-border-opacity: 1;
   border-color: rgba(17, 24, 39, var(--tw-border-opacity));
   border-radius: 0.25rem;
   border-width: 2px;
   height: 2.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
   margin-right: 0.5rem;
   --tw-text-opacity: 1;
   color: rgba(249, 250, 251, var(--tw-text-opacity));
@@ -26545,23 +26539,32 @@ video {
   width: 2.5rem;
 }
 
-.gc-checkbox:checked {
+.gc-input-checkbox:checked {
   --tw-bg-opacity: 1;
   background-color: rgba(38, 55, 74, var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgba(249, 250, 251, var(--tw-text-opacity));
 }
 
-.gc-checkbox .gc-label, .gc-input-radio .gc-label {
-  display: inline;
-  font-weight: 400;
-}
+/* .gc-checkbox .gc-label,
+.gc-input-radio .gc-label {
+  @apply inline font-normal text-base;
+} */
 
-.gc-input-radio {
+.gc-input-radio, .gc-input-checkbox {
+  display: flex;
+  align-items: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.gc-radio-label, .gc-checkbox-label {
+  display: block;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .gc-radio__input {
@@ -35931,69 +35934,34 @@ video {
     height: 100vh;
   }
 
-  .xxs\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .xxs\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .xxs\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .xxs\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .xxs\:text-p {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .xxs\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .xxs\:text-h3 {
+    font-size: 24px;
+    line-height: 24.3px;
   }
 
-  .xxs\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .xxs\:text-h2 {
+    font-size: 32px;
+    line-height: 35.5px;
   }
 
-  .xxs\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .xxs\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .xxs\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .xxs\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .xxs\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .xxs\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .xxs\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
+  .xxs\:text-h1 {
+    font-size: 34px;
+    line-height: 37.4px;
   }
 
   .xxs\:leading-3 {
@@ -61792,69 +61760,34 @@ video {
     height: 100vh;
   }
 
-  .xs\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .xs\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .xs\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .xs\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .xs\:text-p {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .xs\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .xs\:text-h3 {
+    font-size: 24px;
+    line-height: 24.3px;
   }
 
-  .xs\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .xs\:text-h2 {
+    font-size: 32px;
+    line-height: 35.5px;
   }
 
-  .xs\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .xs\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .xs\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .xs\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .xs\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .xs\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .xs\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
+  .xs\:text-h1 {
+    font-size: 34px;
+    line-height: 37.4px;
   }
 
   .xs\:leading-3 {
@@ -87653,69 +87586,34 @@ video {
     height: 100vh;
   }
 
-  .sm\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .sm\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .sm\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .sm\:text-p {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .sm\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .sm\:text-h3 {
+    font-size: 24px;
+    line-height: 24.3px;
   }
 
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .sm\:text-h2 {
+    font-size: 32px;
+    line-height: 35.5px;
   }
 
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .sm\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .sm\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .sm\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .sm\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
+  .sm\:text-h1 {
+    font-size: 34px;
+    line-height: 37.4px;
   }
 
   .sm\:leading-3 {
@@ -113514,69 +113412,34 @@ video {
     height: 100vh;
   }
 
-  .md\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .md\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .md\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .md\:text-p {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .md\:text-h3 {
+    font-size: 24px;
+    line-height: 24.3px;
   }
 
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .md\:text-h2 {
+    font-size: 32px;
+    line-height: 35.5px;
   }
 
-  .md\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .md\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .md\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .md\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
+  .md\:text-h1 {
+    font-size: 34px;
+    line-height: 37.4px;
   }
 
   .md\:leading-3 {
@@ -139375,69 +139238,34 @@ video {
     height: 100vh;
   }
 
-  .lg\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .lg\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .lg\:text-p {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .lg\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .lg\:text-h3 {
+    font-size: 24px;
+    line-height: 24.3px;
   }
 
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .lg\:text-h2 {
+    font-size: 32px;
+    line-height: 35.5px;
   }
 
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .lg\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .lg\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .lg\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
+  .lg\:text-h1 {
+    font-size: 34px;
+    line-height: 37.4px;
   }
 
   .lg\:leading-3 {
@@ -165236,69 +165064,34 @@ video {
     height: 100vh;
   }
 
-  .xl\:text-xs {
-    font-size: 0.75rem;
-    line-height: 1rem;
-  }
-
   .xl\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .xl\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .xl\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  .xl\:text-p {
+    font-size: 20px;
+    line-height: 30px;
   }
 
-  .xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .xl\:text-h3 {
+    font-size: 24px;
+    line-height: 24.3px;
   }
 
-  .xl\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .xl\:text-h2 {
+    font-size: 32px;
+    line-height: 35.5px;
   }
 
-  .xl\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
-  .xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .xl\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .xl\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
-  }
-
-  .xl\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
-  }
-
-  .xl\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
+  .xl\:text-h1 {
+    font-size: 34px;
+    line-height: 37.4px;
   }
 
   .xl\:leading-3 {
