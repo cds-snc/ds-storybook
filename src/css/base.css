@@ -32,6 +32,11 @@
 }
 
 .gc-form-group {
+  @apply mb-0;
+}
+
+.gc-form-group .gc-input-radio:last-of-type,
+.gc-form-group .gc-input-checkbox:last-of-type {
   @apply mb-12;
 }
 
@@ -40,7 +45,7 @@
 }
 
 .gc-section-header {
-  @apply font-bold text-h2 mb-16 mt-20 p-6 bg-gray-background;
+  @apply font-bold text-h2 mb-16 mt-10 p-6 bg-gray-background;
 }
 
 .gc-legend {

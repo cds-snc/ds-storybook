@@ -26856,6 +26856,10 @@ video {
 }
 
 .gc-form-group {
+  margin-bottom: 0px;
+}
+
+.gc-form-group .gc-input-radio:last-of-type, .gc-form-group .gc-input-checkbox:last-of-type {
   margin-bottom: 3rem;
 }
 
@@ -26872,8 +26876,8 @@ video {
   font-weight: 700;
   font-size: 30px;
   line-height: 33.5px;
+  margin-top: 2.5rem;
   margin-bottom: 4rem;
-  margin-top: 5rem;
   padding: 1.5rem;
 }
 
