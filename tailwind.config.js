@@ -74,7 +74,7 @@ module.exports = {
       green: {
         ...colors.green,
         default: "#00703C",
-        darker: "#002D18",
+        darker: "#005930",
       },
       black: {
         ...colors.black,
@@ -83,7 +83,8 @@ module.exports = {
     },
     boxShadow: {
       result: "0px 0px 12px -2px rgba(0,0,0,0.4)",
-      none: "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
+      none:
+        "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
     },
     borderWidth: {
       default: "1px",

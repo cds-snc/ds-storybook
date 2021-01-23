@@ -9,6 +9,7 @@ import FormGroup from "../FormGroup/FormGroup";
 import TextInput from "../TextInput/TextInput";
 import TextArea from "../TextArea/TextArea";
 import Checkboxes from "../Checkboxes/Checkboxes";
+import Button from "../Button/Button";
 
 export default {
   title: "Forms/Layout",
@@ -305,6 +306,7 @@ export const defaultLayout = (): React.ReactElement => (
           "Modification to counters, vanities, cupboards or mirrors2",
         ]}
       />
+      <Button type="submit">Submit</Button>
     </FormGroup>
   </Layout>
 );

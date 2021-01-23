@@ -53,11 +53,11 @@
 }
 
 .gc-button {
-  @apply cursor-pointer border-b-4 border-gray-900 py-3 px-5 mr-2 my-5 font-bold text-base no-underline text-gray-50 bg-blue-800 outline-none w-60;
+  @apply cursor-pointer border-b-4 border-gray-900 py-3 px-5 mr-2 my-5 font-bold text-base no-underline text-gray-50 bg-green-default outline-none w-60;
 }
 
 .gc-button:hover {
-  @apply bg-blue-700;
+  @apply bg-green-darker;
 }
 
 .gc-label {
