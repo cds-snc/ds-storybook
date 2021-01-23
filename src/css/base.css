@@ -64,6 +64,18 @@
   @apply block mb-2 text-base font-bold w-4/5;
 }
 
+.gc-ul {
+  @apply list-disc text-base;
+}
+
+.gc-ul li{
+  @apply ml-6;
+}
+
+.gc-ul li:last-of-type {
+  @apply mb-12;
+}
+
 .gc-textarea {
   @apply border-solid border-2 py-3 px-2 border-gray-900 mt-2 mb-12 w-full lg:w-3/6;
 }

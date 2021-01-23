@@ -26927,6 +26927,20 @@ video {
   width: 80%;
 }
 
+.gc-ul {
+  font-size: 20px;
+  line-height: 30px;
+  list-style-type: disc;
+}
+
+.gc-ul li{
+  margin-left: 1.5rem;
+}
+
+.gc-ul li:last-of-type {
+  margin-bottom: 3rem;
+}
+
 .gc-textarea {
   --tw-border-opacity: 1;
   border-color: rgba(17, 24, 39, var(--tw-border-opacity));

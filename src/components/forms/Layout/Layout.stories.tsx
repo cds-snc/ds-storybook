@@ -24,6 +24,7 @@ export const defaultLayout = (): React.ReactElement => (
     <H1 heading="Grant Application for Funding – Enabling Accessibility Fund (EAF) - Small Projects Component" />
 
     <Paragraph text="The Enabling Accessibility Fund provides funding for eligible capital projects that increase accessibility for people with disabilities in Canadian communities and workplaces. It creates more opportunities for people with disabilities to participate in." />
+
     <MultipleChoice
       label="Funding Requested"
       options={["Community Accessibility", "Workplace Accessibility"]}
@@ -40,10 +41,10 @@ export const defaultLayout = (): React.ReactElement => (
       id="2"
     />
     <SectionHeader>1. Organization Identification</SectionHeader>
-    <TextInput label="Legal name" id="3" name="legal-name" type="text" />
+    <TextInput label="Legal name" id="3a" name="legal-name" type="text" />
     <TextInput
       label="Operating name"
-      id="3"
+      id="3b"
       name="operating-name"
       type="text"
     />
@@ -170,8 +171,8 @@ export const defaultLayout = (): React.ReactElement => (
     <SectionHeader>3. Primary Contact</SectionHeader>
     <Paragraph text="This should be your primary contact person with respect to this application for funding." />
     <FormGroup legend="Given Name / Surname" name="primary-name">
-      <TextInput label="Name" id="11" name="primary-name" type="text" />
-      <TextInput label="Surname" id="12" name="primary-surname" type="text" />
+      <TextInput label="Name" id="a" name="primary-name" type="text" />
+      <TextInput label="Surname" id="b" name="primary-surname" type="text" />
       <TextInput
         label="Position Title"
         id="21"
