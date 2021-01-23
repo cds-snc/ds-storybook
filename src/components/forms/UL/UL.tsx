@@ -13,7 +13,7 @@ export const UL = (props: ULProps): React.ReactElement => {
   const classes = classnames("gc-ul", className);
 
   return (
-    <ul data-testid="checkbox" className={classes} id={id}>
+    <ul data-testid="unordered-list" className={classes} id={id}>
       {options.map((listItem, index) => (
         <li id={listItem + "-" + index} key={listItem + "-key-" + index}>
           {listItem}
