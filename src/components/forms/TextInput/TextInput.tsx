@@ -1,5 +1,8 @@
 import React from "react";
 import classnames from "classnames";
+import Label from "../Label/Label";
+import Description from "../Description/Description";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 type TextInputRef =
   | string
@@ -11,11 +14,14 @@ type TextInputRef =
 interface RequiredTextInputProps {
   id: string;
   name: string;
+  label: string;
   type: "text" | "email" | "number" | "password" | "search" | "tel" | "url";
 }
 
 interface CustomTextInputProps {
+  description?: string;
   className?: string;
+  hint?: string;
   validationStatus?: "error" | "success";
   success?: boolean;
   inputSize?: "small" | "medium";
@@ -28,20 +34,39 @@ export type OptionalTextInputProps = CustomTextInputProps &
 export type TextInputProps = RequiredTextInputProps & OptionalTextInputProps;
 
 export const TextInput = (props: TextInputProps): React.ReactElement => {
-  const { id, name, type, className, inputRef, ...inputProps } = props;
+  const {
+    id,
+    name,
+    type,
+    className,
+    description,
+    label,
+    validationStatus,
+    inputRef,
+    hint,
+    ...inputProps
+  } = props;
 
   const classes = classnames("gc-input-text", className);
 
   return (
-    <input
-      data-testid="textInput"
-      className={classes}
-      id={id}
-      name={name}
-      type={type}
-      ref={inputRef}
-      {...inputProps}
-    />
+    <React.Fragment>
+      <Label hint={hint} htmlFor="input-type-text">{label}</Label>
+      {description ? <Description>{description}</Description> : null}
+      {validationStatus === "error" ? (
+        <ErrorMessage>Helpful error message</ErrorMessage>
+      ) : null}
+
+      <input
+        data-testid="textInput"
+        className={classes}
+        id={id}
+        name={name}
+        type={type}
+        ref={inputRef}
+        {...inputProps}
+      />
+    </React.Fragment>
   );
 };
 

@@ -25,7 +25,7 @@ export const Label = (props: LabelProps): React.ReactElement => {
   return (
     <label data-testid="label" className={classes} htmlFor={htmlFor}>
       {children}
-      {hint && <span className="gc-hint">{hint}</span>}
+      {hint && <span className="gc-hint">{` ${hint}`}</span>}
     </label>
   );
 };

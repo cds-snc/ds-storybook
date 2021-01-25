@@ -6,7 +6,7 @@ import { TextArea } from "./TextArea"
 describe("TextArea component", () => {
   it("renders without errors", () => {
     const { queryByTestId } = render(
-      <TextArea id="input-type-text" name="input-type-text" />
+      <TextArea label="This is a textArea label" id="input-type-text" name="input-type-text" />
     )
     expect(queryByTestId("textarea")).toBeInTheDocument()
   })

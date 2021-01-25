@@ -1,10 +1,17 @@
 import React from "react";
 import classnames from "classnames";
+import Label from "../Label/Label";
+import Description from "../Description/Description";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 interface DropdownProps {
   id: string;
   name: string;
+  label: string;
+  description?: string;
+  validationStatus?: "error" | "success";
   className?: string;
+  hint ?: string;
   choices: Array<string | number>;
   children?: React.ReactNode;
   inputRef?:
@@ -29,7 +36,18 @@ const DropdownOption = (props: DropdownOptionProps): React.ReactElement => {
 };
 
 export const Dropdown = (props: DropdownProps): React.ReactElement => {
-  const { id, name, className, inputRef, choices, ...inputProps } = props;
+  const {
+    id,
+    name,
+    className,
+    inputRef,
+    choices,
+    hint,
+    label,
+    description,
+    validationStatus,
+    ...inputProps
+  } = props;
 
   const classes = classnames("gc-dropdown", className);
 
@@ -47,16 +65,23 @@ export const Dropdown = (props: DropdownProps): React.ReactElement => {
   }
 
   return (
-    <select
-      data-testid="dropdown"
-      className={classes}
-      id={id}
-      name={name}
-      ref={inputRef}
-      {...inputProps}
-    >
-      <>{options}</>
-    </select>
+    <React.Fragment>
+      <Label hint={hint} htmlFor="options">{label}</Label>
+      {description ? <Description>{description}</Description> : null}
+      {validationStatus === "error" ? (
+        <ErrorMessage>Helpful error message</ErrorMessage>
+      ) : null}
+      <select
+        data-testid="dropdown"
+        className={classes}
+        id={id}
+        name={name}
+        ref={inputRef}
+        {...inputProps}
+      >
+        <>{options}</>
+      </select>
+    </React.Fragment>
   );
 };
 
