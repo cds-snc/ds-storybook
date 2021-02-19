@@ -2,11 +2,36 @@ const { colors } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   theme: {
+    extend: {
+      width: {
+        "cr-label-desktop": "50rem",
+        "cr-label-1025": "30rem",
+        "cr-label-ipad": "25rem",
+        "cr-label-duo": "25rem",
+        "cr-label-6s": "15rem",
+        "cr-label-5s": "14rem",
+        "cr-label-fold": "11.5rem",
+        "flag-desktop": "22.5rem",
+        "flag-6s": "18rem",
+        "flag-5s": "16.5rem",
+        "flag-fold": "15rem",
+      },
+      margin: {
+        "10px": "10px",
+      },
+      outline: {
+        default: ["3px solid #ffbf47"],
+      },
+      backgroundPosition: {
+        "center-right-15px": "center right 15px",
+      },
+      inset: {
+        "10px": "10px",
+        "9px": "9px",
+      },
+    },
     container: {
       center: true,
-    },
-    boxShadow: {
-      outline: "0 0 0 3px rgba(255, 191, 71, 1)",
     },
     fontFamily: {
       sans: ["lato"],
@@ -15,28 +40,42 @@ module.exports = {
     /* ["fontSize", "lineHeight"]
        These typography rules have been pulled from the design system
     */
-
     fontSize: {
+      badge: ["14px", "14px"],
       sm: ["16px", "22px"],
-      base: ["20px", "30px"],
-      p: ["20px", "30px"],
-      h3: ["24px", "24.3px"],
-      h2: ["30px", "33.5px"],
-      h1: ["34px", "42px"],
+      base: ["20px", "28px"],
+      p: ["20px", "28px"],
+      h3: ["24px", "26px"],
+      h2: ["30px", "38px"],
+      h1: ["34px", "44px"],
+      small_sm: ["12px", "14px"],
+      small_base: ["16px", "22px"],
+      small_p: ["16px", "22px"],
+      small_h3: ["18px", "22px"],
+      small_h2: ["20px", "28px"],
+      small_h1: ["24px", "28px"],
+    },
+    maxWidth: {
+      prose: "75ch",
     },
     screens: {
-      xxs: "280px",
-      xs: "325px",
-      sm: "450px",
-      md: "550px",
-      lg: "768px",
-      xl: "1024px",
+      xxl: { max: "1240px" },
+      xl: { max: "1025px" },
+      lg: { max: "769px" },
+      md: { max: "550px" },
+      sm: { max: "450px" },
+      xs: { max: "320px" },
+      xxs: { max: "290px" },
     },
     colors: {
       red: {
         ...colors.red,
         100: "#f3e9e8",
         default: "#b10e1e",
+      },
+      purple: {
+        ...colors.purple,
+        default: "#7834bc",
       },
       white: {
         ...colors.white,
@@ -79,26 +118,34 @@ module.exports = {
       black: {
         ...colors.black,
         default: "#000",
+        form: "#0b0c0c",
       },
     },
     boxShadow: {
+      default: "0 1px 3px rgba(0, 0, 0, 0.05);",
       result: "0px 0px 12px -2px rgba(0,0,0,0.4)",
       none:
         "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
     },
     borderWidth: {
       default: "1px",
-      "0": "0",
-      "2": "2px",
-      "2.5": "2.5px",
-      "3": "3px",
-      "4": "4px",
-      "8": "8px",
+      0: "0",
+      1: "1px",
+      1.5: "1.5px",
+      2: "2px",
+      2.5: "2.5px",
+      3: "3px",
+      4: "4px",
+      8: "8px",
     },
     zIndex: {
       "-1": "-1,",
-      "100": "100,",
+      100: "100,",
     },
   },
-  variants: {},
+  variants: {
+    extend: {},
+  },
+  purge: ["./components/**/*.tsx", "./pages/**/*.js"],
+  plugins: [require("tailwindcss"), require("precss"), require("autoprefixer")],
 };

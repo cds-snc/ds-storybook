@@ -25,8 +25,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public --no-dll",
     "build:storybook": "build-storybook -s public --no-dll",
-    "build:tailwind": "postcss src/css/base.css -o src/css/tailwind.css",
-    "create": "plop"
+    "deploy-storybook": "storybook-to-ghpages",
+    "build:tailwind": "postcss src/css/base.css -o src/css/tailwind.css"
   },
   "eslintConfig": {
     "extends": [
@@ -54,13 +54,19 @@
     "@storybook/node-logger": "^6.1.14",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.1.14",
+    "@storybook/storybook-deployer": "^2.8.7",
     "@types/classnames": "^2.2.11",
     "autoprefixer": "^10.2.1",
-    "plop": "^2.7.4",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
     "postcss": "^8.2.1",
-    "postcss-import": "^14.0.0",
-    "postcss-preset-env": "^6.7.0",
     "postcss-cli": "^8.3.1",
-    "react-is": "^17.0.1"
+    "postcss-import": "^14.0.0",
+    "postcss-loader": "^4.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "react-is": "^17.0.1",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0"
   }
 }
