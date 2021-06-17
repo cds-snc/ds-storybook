@@ -26,17 +26,19 @@ In addition to having an overview of the Design System, the inventory will show:
 To run locally, you need to have [Node.js](https://nodejs.org/) installed. Storybook is initialized via `react-scripts` and the stories can be written in React, but the end goal is to have them in HTML.
 
 ```sh
-$ cd platform-storybook
+$ cd platform-design-system
 $ npm i
 $ npm run storybook
 ```
 
 ### Publish and deploy
 
-The deployment to Heroku is setup automatically via the git integration: https://platform-storybook.herokuapp.com/
+The deployment happens to the `gh-pages` branch automatically using [storybook-deployer](https://github.com/storybookjs/storybook-deployer) via the command:
 
-In order to publish your changes, please run the command `npm run build:storybook` and commit the generated changes in the folder `storybook-static`. More info on the [storybook publishing guide](https://storybook.js.org/docs/react/workflows/publish-storybook)
-
+```sh
+cd platform-design-system
+npm deploy-storybook
+```
 
 ### Contributing
 
