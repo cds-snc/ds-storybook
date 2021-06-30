@@ -1,45 +1,34 @@
-# CDS Platform Design System in Storybook
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-> \*Note: This repo is work-in-progress
+## Getting Started
 
-### Overview
+First, run the development server:
 
-This is an effort to identify the UI inventory used by CDS Platform products and showcase it in Storybook.
-
-Some of the goals for this inventory are:
-
-- Be a single source of truth for both Design and Development when it comes to best practices in UI.
-- Serve as a testing tool, where designers can compare their Figma creations with what was built, and developers can check if their apps generate the correct HTML/CSS (no matter the tech-stack used)
-- etc
-
-### Features
-
-In addition to having an overview of the Design System, the inventory will show:
-
-- The generated UI element in HTML/CSS
-- Preview of that element in Figma via an [integrated addon](https://github.com/pocka/storybook-addon-designs)
-- Accessibility review via an [integrated addon](https://github.com/storybookjs/storybook/tree/master/addons/a11y)
-- Code source in HTML via [storybook docs essential addon](https://storybook.js.org/docs/react/writing-docs/introduction)
-
-### How to run it locally
-
-To run locally, you need to have [Node.js](https://nodejs.org/) installed. Storybook is initialized via `react-scripts` and the stories can be written in React, but the end goal is to have them in HTML.
-
-```sh
-$ cd platform-design-system
-$ npm i
-$ npm run storybook
+```bash
+npm run dev
+# or
+yarn dev
 ```
 
-### Publish and deploy
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The deployment happens to the `gh-pages` branch automatically using [storybook-deployer](https://github.com/storybookjs/storybook-deployer) via the command:
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-```sh
-cd platform-design-system
-npm deploy-storybook
-```
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-### Contributing
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-If you'd like to contribute, feel free to add stories under the `src` folder. More docs and tutorials on the [official Storybook page](https://storybook.js.org/docs/react/get-started/introduction)
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
