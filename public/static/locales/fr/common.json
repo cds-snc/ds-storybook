@@ -1,0 +1,35 @@
+{
+  "footer": {
+    "privacy": {
+      "link": "/fr/privacy-confidentialite",
+      "desc": "Politique de confidentialité"
+    },
+    "terms": {
+      "link": "https://numerique.canada.ca/transparence/avis/",
+      "desc": "Avis"
+    }
+  },
+  "phase": {
+    "desc": "Ce site évoluera au fur et à mesure que nous testons des idées."
+  },
+  "skip-link": "Passer au contenu principal",
+  "fip": {
+    "link": "/",
+    "text": "Symbole du gouvernement du Canada"
+  },
+  "lang-toggle": "Sélection de la langue",
+  "submitButton": "Soumettre",
+  "input-validation": {
+    "heading": "Veuillez corriger les erreurs trouvées dans la page",
+    "required": "Veuillez compléter les champs obligatoires afin de continuer",
+    "number": "Veuillez entrer un numéro",
+    "text": "",
+    "alphanumeric": "Veuillez entrer uniquement des lettres et des chiffres",
+    "email": "Veuillez entrer une adresse courriel valide",
+    "date": "Veuillez utiliser le format de date mm/jj/aaaa",
+    "phone": "Veuillez entrer numéro de téléphone valide",
+    "regex": "Veuillez utiliser le bon format"
+  },
+  "required-field": "Nécessaire",
+  "title": "Système de design - Sandbox"
+}
